@@ -34,9 +34,7 @@ You need to configure the actions in your backend:
 yarn add --cwd packages/backend @parfuemerie-douglas/scaffolder-backend-module-azure-pipelines
 ```
 
-### Installing in the legacy backend system
-
-Install the actions (you can check the
+Configure the actions (you can check the
 [docs](https://backstage.io/docs/features/software-templates/writing-custom-actions#registering-custom-actions)
 to see all options):
 
@@ -72,19 +70,6 @@ return await createRouter({
   reader: env.reader,
 });
 ```
-
-### Installing on the new backend system
-
-```typescript
-// packages/backend/src/index.ts
-const backend = createBackend();
-
-backend.add('@parfuemerie-douglas/scaffolder-backend-module-azure-pipelines');
-
-backend.start();
-```
-
-## Configuring the azure pipeline actions
 
 The Azure pipeline actions use an [Azure PAT (personal access
 token)](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate)

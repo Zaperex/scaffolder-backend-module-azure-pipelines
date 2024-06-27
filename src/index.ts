@@ -15,3 +15,4 @@
  */
 
 export * from "./actions";
+export { azurePipelineModule as default } from "./module";
